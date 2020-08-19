@@ -1,0 +1,17 @@
+<%- include partials\header.ejs %>
+
+<h1>Home</h1>
+
+<p><%= homeContent %></p>
+
+<% console.log(listItems) %>
+
+<% listItems.forEach(function(item){ %>
+  <h1><%= item.title %></h1>
+  <p><%= item.content.substring(1, 100) %>...<a href="/posts/<%=item.title%>">read more</a> %></p>
+
+<%})%>
+
+<a href="/compose"><button>Create new update</button></a>
+
+<%- include partials/footer.ejs %>
